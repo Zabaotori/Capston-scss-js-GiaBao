@@ -1,0 +1,215 @@
+@import "./theme/base";
+
+.header {
+    background: #000;
+    height: 50px;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-right: 10px;
+                color: #f6f6f6;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.menu {
+
+    // background-color: orange;
+    .container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        a {
+            font-size: 20px;
+            font-weight: 300;
+            color: #000;
+            opacity: 70%;
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                background-color: #000;
+                bottom: -10px;
+                left: 0px;
+            }
+
+            &:hover {
+                transition: color 0.5s;
+                color: black;
+
+                &::after {
+                    width: 100%;
+                    transition: width 0.3s;
+                }
+            }
+        }
+
+        .main {
+            font-weight: 400;
+            opacity: 1;
+        }
+    }
+}
+
+.register {
+    .container {
+        h2 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        form {
+            label {
+                font-size: 20px;
+                font-weight: 300;
+            }
+
+            input.form-control {
+                border: none;
+                border-bottom: 2px solid #c43bf3;
+                border-radius: 0;
+                box-shadow: none;
+
+                &:focus {
+                    border-color: #c43bf3;
+                    box-shadow: none;
+                }
+            }
+
+            .required {
+                color: red;
+                font-size: 0.9rem;
+            }
+
+            .btn-submit {
+                background-color: #c43bf3;
+                color: white;
+                padding: 0.5rem 2rem;
+                border: none;
+
+                &:hover {
+                    background-color: #da8df4;
+                }
+            }
+
+            .form-check-input {
+                width: 1.5em;
+                height: 1.5em;
+
+                &:checked {
+                    background-color: #c43bf3;
+                    border-color: #c43bf3;
+                }
+            }
+
+            .form-check-label {
+                margin-left: 0.5rem;
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+
+.footer {
+//   font-family: Arial, sans-serif;
+
+  .top {
+    background-color: #f9f7f7;
+    .footer-top {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+
+    h5 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        a {
+          color: #000;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 300;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #333;
+      font-weight: 300;
+    }
+
+    .link {
+      color: #d12b2b;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 300;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  }
+
+  .bottom {
+    background-color: #f2f2f2;
+    .footer-bottom {
+    padding: 2rem 0;
+
+    h6 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .link {
+      color: #d12b2b;
+      font-size: 14px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  }
+}
